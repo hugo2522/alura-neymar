@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neymar na Seleção</title>
+    <style>
+        /* Estilos bem básicos pra não complicar */
+        body {
+            font-family: sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #222;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button span {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>NEYMAR VAI SE APOSENTAR DA SELEÇÃO? 😱</h1>
+        <p>O Neymar falou que o ciclo dele na Seleção Brasileira tá chegando ao fim... É o fim de uma era!</p>
+
+        <!-- Foto do Neymar -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Bra-Cos_%281%29_%28cropped%29.jpg" alt="Neymar">
+
+        <h3>Números marcantes na Seleção</h3>
+        <p>⚽ 80 gols com a camisa do Brasil<br>🏆 Maior artilheiro da história da Seleção</p>
+
+        <p>E aí, qual a sua reação?</p>
+
+        <!-- Os botões com o número dentro do span -->
+        <button id="btn-triste">💔 Triste <span>0</span></button>
+        <button id="btn-valeu">👏 Valeu Ney <span>0</span></button>
+    </div>
+
+    <script>
+        // Pega os botões da página
+        const botaoTriste = document.querySelector("#btn-triste");
+        const botaoValeu = document.querySelector("#btn-valeu");
+
+        // Função do botão de Triste
+        function ficouTriste() {
+            let numero = botaoTriste.querySelector("span");
+            numero.textContent++;
+            console.log("Alguém ficou triste :(");
+        }
+
+        // Função do botão de Agradecimento
+        function mandouValeu() {
+            let numero = botaoValeu.querySelector("span");
+            numero.textContent++;
+            console.log("Alguém mandou o valeu pro Ney!");
+        }
+
+        // Fica ouvindo os cliques
+        botaoTriste.addEventListener("click", ficouTriste);
+        botaoValeu.addEventListener("click", mandouValeu);
+    </script>
+
+</body>
+</html>
